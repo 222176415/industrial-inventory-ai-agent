@@ -1,6 +1,6 @@
 # Industrial Inventory AI Agent
 
-An enterprise-grade, natural language text-to-SQL analytics system designed for manufacturing and warehouse operations. Built using **n8n**, **PostgreSQL**, and **Advanced LLMs**, this agent allows non-technical floor managers and inventory controllers to query complex parts inventories, supplier lead times, and equipment part usage in real-time.
+An enterprise-grade, natural language text-to-SQL analytics system designed for manufacturing and warehouse operations. Built using **n8n**, **PostgreSQL**, and **Gemini LLM**, this agent allows non-technical floor managers and inventory controllers to query complex parts inventories, supplier lead times, and equipment part usage in real-time.
 
 ---
 
@@ -37,3 +37,6 @@ An enterprise-grade, natural language text-to-SQL analytics system designed for 
 - **Database Access:**  PostgreSQL Read-Only Client (Least-Privilege Role)
 - **AI & LLM Provider:** -
 - **API & Trigge:** REST / Webhooks / Internal Chat Trigger
+
+
+**Published UAT Chat:**  [Chat Trigger](https://themba-dev.app.n8n.cloud/webhook/1d279836-77d9-454b-b752-0ecc20a4aacc/chat)
