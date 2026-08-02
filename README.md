@@ -1,12 +1,29 @@
-# Enterprise Natural Language BI & Inventory Analytics Agent
+# Industrial Inventory AI Agent
 
-An AI-powered SQL query assistant built with n8n, Supabase (PostgreSQL), and Anthropic Claude/OpenAI. Converts complex business questions into precise SQL queries with strict security guardrails.
+An enterprise-grade, natural language text-to-SQL analytics system designed for manufacturing and warehouse operations. Built using **n8n**, **PostgreSQL**, and **Advanced LLMs**, this agent allows non-technical floor managers and inventory controllers to query complex parts inventories, supplier lead times, and equipment part usage in real-time.
+
+---
 
 ## Architecture
-[User UI / Slack] -> [n8n Webhook API] -> [Schema-Aware LLM Agent] -> [Read-Only DB Role (Postgres)] -> [Formatted Markdown Output]
 
-## Business Problem
-Non-technical operations teams frequently rely on data analysts to fetch simple SQL reports, creating bottlenecks in daily decision-making.
+```text
+[ Operations / User Chat UI ]
+             │
+             ▼
+     [ n8n Workflow API ] ─── (Injects Schema Context & Guardrails)
+             │
+             ▼
+      [ LLM SQL Agent ]
+             │
+     (Generates Safe SELECT)
+             │
+             ▼
+  [ PostgreSQL / Supabase ] ─── (Restricted Read-Only Database Role)
+             │
+             ▼
+[ Formatted Markdown Insights ]
+
+```
 
 ## Key Technical Features
 - **Schema-Constrained Text-to-SQL Generation:** Restricts LLM query synthesis to explicitly defined database schemas.
@@ -15,7 +32,8 @@ Non-technical operations teams frequently rely on data analysts to fetch simple 
 - **Execution Audit Trail:** Logs generated queries and execution times for observability and security auditing.
 
 ## Tech Stack
-- **Orchestration:** n8n Workflow Automation
-- **Database:** PostgreSQL (Supabase)
-- **AI / LLM:** Anthropic Claude 3.5 Sonnet / OpenAI GPT-4o
-- **Integration API:** REST / Webhooks
+- **Orchestration & Workflow:** n8n Workflow Automation
+- **Database Engine:** PostgreSQL (Hosted on Supabase)
+- **Database Access:**  PostgreSQL Read-Only Client (Least-Privilege Role)
+- **AI & LLM Provider:** -
+- **API & Trigge:** REST / Webhooks / Internal Chat Trigger
