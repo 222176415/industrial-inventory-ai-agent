@@ -2,6 +2,7 @@
 
 An enterprise-grade, natural language text-to-SQL analytics system designed for manufacturing and warehouse operations. Built using **n8n**, **PostgreSQL**, and **Gemini LLM**, this agent allows non-technical floor managers and inventory controllers to query complex parts inventories, supplier lead times, and equipment part usage in real-time.
 
+**Built with No code Platform** n8n Automation
 ---
 
 ## Architecture
